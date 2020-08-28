@@ -1,0 +1,6 @@
+{
+    "terminal.explorerKind": "external",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.confirmOnExit": true,
+    "terminal.integrated.copyOnSelection": true
+}

@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
-import { Spring } from 'react-spring/renderprops';
+import { Spring, config } from 'react-spring/renderprops';
+import {Link, animateScroll as scroll} from 'react-scroll';
 import { Transition, animated } from 'react-spring/renderprops';
 import Education from './cards/edu';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,12 +9,20 @@ import Workex from './cards/workex';
 import TrailsExample from './cards/slide';
 class Part1 extends Component {
 
+    // componentDidMount() {
+    //     window.scrollTo(0, 500);
+    // }
+    
     render() {
         return (
             <Spring
-                from={{ opacity: 0 }}
+                from={{ opacity: 1 }}
                 to={{ opacity: 1 }}
-                config={{ delay: 200, duration: 1000 }}
+                config = {{
+                    mass:3,
+                    tension: 320
+                }}
+                // config={{ delay: 0, duration: 500 }}
             >
                 {
                     props => (

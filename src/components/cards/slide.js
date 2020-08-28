@@ -26,7 +26,7 @@ export default class TrailsExample extends React.Component {
                 >
                     {item => props => <span style={props}>{item.text}</span>}
                 </Trail>
-                {/* <Trail
+                <Trail
                     native
                     reverse={toggle}
                     initial={null}
@@ -43,7 +43,7 @@ export default class TrailsExample extends React.Component {
                             }}
                         />
                     )}
-                </Trail> */}
+                </Trail>
             </div>
         )
     }

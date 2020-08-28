@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../custom.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Part1 from './part1';
-import {Transition, animated} from 'react-spring/renderprops';
+import { Transition, animated } from 'react-spring/renderprops';
+import { animateScroll as scroll} from 'react-scroll';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,7 @@ class Home extends Component {
         };
     }
 
-    part1Toggle = e => this.setState({ showpt1 : !this.state.showpt1});
+    part1Toggle = e => {scroll.scrollToBottom(); this.setState({ showpt1: !this.state.showpt1 });}
     render() {
         return (
             <div>
@@ -21,6 +23,22 @@ class Home extends Component {
                         <div className="mx-auto text-center">
                             <h1 className="mx-auto my-0 text-uppercase">shristi singh</h1>
                             <h5 className="text-dark-50 mx-auto mt-2 mb-5"><a onClick={this.part1Toggle}>Full-Stack Cloud-Native Developer</a> | Blogger | Painter | Photographer</h5>
+                            
+                            {/* <Link
+                                activeClass={Part1}
+                                to="fscnd"
+                                spy ={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                >
+                                    <a onClick={this.part1Toggle}>
+                                    <h5 className="text-dark-50 mx-auto mt-2 mb-5">
+                                    Full-Stack Cloud-Native Developer | Blogger | Painter | Photographer
+                                    </h5></a>
+                            </Link> */}
+                            {/* </a> */}
+
                             <h4 className="text-info mx-auto mt-2 mb-5 opacity-4">
                                 All that is gold does not glitter, Not all those who wander are
                                 lost.
@@ -75,23 +93,25 @@ class Home extends Component {
                         </div>
                     </div>
                 </header>
+                <section id = 'fscnd'>
                 <Transition
                     native
                     items={this.state.showpt1}
-                    from={{ opacity: 0 }}
+                    from={{ opacity: 1 }}
                     enter={{ opacity: 1 }}
                     leave={{ opacity: 0 }}
                 >
                     {show => show && (props => (
-                        <div className = 'row'>
+                        <div className='row'>
                             <animated.div style={props}>
-                            <Part1 />
-                        </animated.div>
+                                <Part1 />
+                            </animated.div>
                         </div>
-                        
+
                     ))
                     }
                 </Transition>
+                </section>
             </div>
 
 

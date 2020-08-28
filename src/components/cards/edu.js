@@ -11,13 +11,14 @@ export default function Education() {
         config: { mass: 5, tension: 300, friction: 50 }
     })
     return (
-        <div onClick={() => set(state => !state)}>
+        <div>
             <div>
-            <a.div class="flip back opacity-6 shadow" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
+                <button onClick={() => set(state => !state)}>??</button>
+                <a.div class="flip back opacity-6 shadow" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
                     <h1>EDUCATION</h1>
                 </a.div>
                 <a.div class="flip front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
-                <TrailsExample/>
+                    <TrailsExample />
                 </a.div>
             </div>
         </div>

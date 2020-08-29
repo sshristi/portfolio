@@ -97,9 +97,18 @@ class Home extends Component {
                 <Transition
                     native
                     items={this.state.showpt1}
-                    from={{ opacity: 1 }}
-                    enter={{ opacity: 1 }}
-                    leave={{ opacity: 0 }}
+                    from={{ opacity: 1, marginRight:-500, marginLeft: 500}}
+                    enter={{ opacity: 1, marginRight: 0, marginLeft:0 }}
+                    leave={{ opacity: 0}}
+                    config ={{
+                        // duration:1000,
+                        // velocity:300,
+                        // tension: 50
+                        // delay: 100,
+                        mass:10,
+                        tension:300,
+                        friction:50,
+                    }}
                 >
                     {show => show && (props => (
                         <div className='row'>

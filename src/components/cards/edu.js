@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import './styling.css'
-import TrailsExample from './slide'
+import Slide1 from './slide1'
 
 export default function Education() {
     const [flipped, set] = useState()
@@ -18,7 +18,7 @@ export default function Education() {
                     <h1>EDUCATION</h1>
                 </a.div>
                 <a.div class="flip front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
-                    <TrailsExample />
+                    <Slide1 />
                 </a.div>
             </div>
         </div>

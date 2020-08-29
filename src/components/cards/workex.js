@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import './styling.css'
-import TrailsExample from './slide'
+import Slide1 from './slide1'
 
 export default function Workex() {
     const [flipped, set] = useState()
     const { transform, opacity } = useSpring({
         opacity: flipped ? 1 : 0,
-        transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-        config: { mass: 5, tension: 300, friction: 50 }
+        transform: `perspective(2000px) rotateX(${flipped ? 180 : 0}deg)`,
+        config: { mass: 3, tension: 300, friction: 50 }
     })
     return (
         <div onClick={() => set(state => !state)}>
@@ -17,7 +17,7 @@ export default function Workex() {
                     <h1>WORK EXPERIENCE</h1>
                 </a.div>
                 <a.div class="flip front " style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
-                    <div className='table'>
+                    {/* <div className='table'>
                         <tr>
                             <td>Infosys ltd.</td>
                             <td>Systems Engineer</td>
@@ -37,8 +37,8 @@ export default function Workex() {
                             <td>Bhopal, Madhya Pradesh</td>
                         </tr>
 
-                    </div>
-                    {/* <TrailsExample/> */}
+                    </div> */}
+                    <Slide1/>
                 </a.div>
             </div>
         </div>

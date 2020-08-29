@@ -5,7 +5,6 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import TrailsExample from './components/cards/slide';
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>,document.getElementById('start'));
 

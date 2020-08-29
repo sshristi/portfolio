@@ -132,11 +132,24 @@ html{
   
   .p1{
     text-align: center;
-    background: slategray;
+    background-color: slategray;
     color: #d3d3d3;
     padding: 1.5rem;
   }
-  
+  .p1background {
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    min-height: 20rem;
+    padding: 2rem 0;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)),url("assets/bg-masthead1.jpg");
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("assets/bg-masthead1.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
   .btn {
     -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;

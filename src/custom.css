@@ -133,8 +133,11 @@ html{
   .p1{
     text-align: center;
     background-color: slategray;
-    color: #d3d3d3;
+    color: #e6e6e6;
     padding: 1.5rem;
+    /* font-size: 20px;
+    line-height: 2.5rem; */
+    /* letter-spacing: 0.8rem; */
   }
   .p1background {
     position: relative;

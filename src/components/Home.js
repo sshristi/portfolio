@@ -105,7 +105,7 @@ class Home extends Component {
                         // velocity:300,
                         // tension: 50
                         // delay: 100,
-                        mass:10,
+                        mass:5,
                         tension:300,
                         friction:50,
                     }}
